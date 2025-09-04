@@ -1,5 +1,8 @@
 # from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets
+from .models import Pet
+from .serializer import PetSerializer
 
-def home(request):
-    return HttpResponse("Hello, World!")
+class PetViewSet(viewsets.ModelViewSet):
+    queryset = Pet.objects.all()
+    serializer_class = PetSerializer

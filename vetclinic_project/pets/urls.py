@@ -1,6 +1,7 @@
-from django.urls import path
-from . import views
+from rest_framework.routers import DefaultRouter
+from .views import PetViewSet
 
-urlpatterns = [
-    path('', views.home),
-]
+router = DefaultRouter()
+router.register(r'pets', PetViewSet, basename='pet')
+
+urlpatterns = router.urls
