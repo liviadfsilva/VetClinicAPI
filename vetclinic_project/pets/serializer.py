@@ -7,4 +7,4 @@ class PetSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Pet
-        fields = ["id", "name", "age", "animal_type", "breed", "color", "sex", "neutered_spayed"]
+        fields = ["id", "name", "age", "animal_type", "breed", "color", "sex", "neutered_spayed", "appointments"]

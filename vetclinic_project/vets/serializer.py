@@ -7,4 +7,4 @@ class VetsSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Vets
-        fields = ["name", "date_of_birth", "email", "phone"]
+        fields = ["name", "date_of_birth", "email", "phone", "appointments"]
