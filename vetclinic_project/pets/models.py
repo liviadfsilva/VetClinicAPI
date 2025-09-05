@@ -1,4 +1,5 @@
 from django.db import models
+from owner.models import Owner
 
 class Pet(models.Model):
     class AnimalType(models.TextChoices):
@@ -17,6 +18,8 @@ class Pet(models.Model):
     neutered_spayed = models.CharField(max_length=1)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE, related_name="pets", default=500)
     
     def __str__(self):
         return f"{self.name} ({self.get_animal_type_display()})"
