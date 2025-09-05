@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'pets',
     'owner',
-    'vets'
+    'vets',
+    'appointments'
 ]
 
 MIDDLEWARE = [
