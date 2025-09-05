@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'pets',
     'owner',
     'vets',
+    'users',
     'appointments',
     'drf_yasg',
 ]
