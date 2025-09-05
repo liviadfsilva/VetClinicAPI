@@ -24,7 +24,7 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Vet Clinic API",
       default_version='v1',
-      description="API for managing vets, pets, owners, and appointments",
+      description="A Django API created for managing vets, pets, owners, and appointments for a vet clinic.",
    ),
    public=True,
    permission_classes=[permissions.AllowAny],
