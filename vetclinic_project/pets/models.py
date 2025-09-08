@@ -19,7 +19,7 @@ class Pet(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
-    owner = models.ForeignKey(Owner, on_delete=models.CASCADE, related_name="pets", default=500)
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE, related_name="pets")
     
     def __str__(self):
         return f"{self.name} ({self.get_animal_type_display()})"
