@@ -1,6 +1,7 @@
 from django.db import models
 from pets.models import Pet
 from vets.models import Vets
+from datetime import time
 
 class Appointments(models.Model):
     class AppointmentType(models.TextChoices):
@@ -13,7 +14,8 @@ class Appointments(models.Model):
     
     pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name="appointments", default=500)
     vet = models.ForeignKey(Vets, on_delete=models.CASCADE, related_name="appointments", default=500)
-    date = models.DateTimeField()
+    date = models.DateField()
+    time = models.TimeField(default=time(0, 9))
     type = models.CharField(max_length=100, choices=AppointmentType.choices, default=AppointmentType.CHECK_UP)
     notes = models.CharField(max_length=500)
     
