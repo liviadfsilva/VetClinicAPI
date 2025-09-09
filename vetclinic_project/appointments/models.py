@@ -1,7 +1,7 @@
 from django.db import models
 from pets.models import Pet
 from vets.models import Vets
-from owner.models import Owner
+from owners.models import Owner
 from datetime import time
 
 class Appointments(models.Model):

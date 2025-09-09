@@ -3,6 +3,6 @@ from .views import OwnerViewSet
 from django.urls import path, include
 
 router = DefaultRouter()
-router.register(r'', OwnerViewSet, basename='owner')
+router.register(r'', OwnerViewSet, basename='owners')
 
 urlpatterns = [path('', include(router.urls))]

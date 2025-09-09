@@ -8,7 +8,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('appointments', '0005_rename_timetype_appointments_time'),
-        ('owner', '0001_initial'),
+        ('owners', '0001_initial'),
     ]
 
     operations = [

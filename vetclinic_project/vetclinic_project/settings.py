@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     'rest_framework',
     'pets',
-    'owner',
+    'owners',
     'vets',
     'users',
     'appointments',

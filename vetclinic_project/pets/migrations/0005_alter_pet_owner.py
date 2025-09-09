@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('owner', '0001_initial'),
+        ('owners', '0001_initial'),
         ('pets', '0004_alter_pet_owner'),
     ]
 

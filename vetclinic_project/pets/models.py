@@ -1,5 +1,5 @@
 from django.db import models
-from owner.models import Owner
+from owners.models import Owner
 
 class Pet(models.Model):
     class AnimalType(models.TextChoices):
