@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from .models import User
 from .serializer import UserSerializer
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -11,7 +11,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
     
 class LogoutView(APIView):
     permission_classes = [IsAuthenticated]
